@@ -12,15 +12,16 @@ import java.util.Scanner;
  */
  public class Vendedor extends Empleado{
     private double cantVendida;
-    private int comision;
+    private double comision;
 
     
-    public Vendedor(String Nombre, int CUIT, String genero, String direccion, int telefono, int cantHijos, Sueldo sueldo, double cantVendida) {
-        super(Nombre, CUIT, genero, direccion, telefono, cantHijos, sueldo);
+    public Vendedor(String Nombre, String edad, Sueldo sueldo, double cantVendida, EmpleadoArray[]list) {
+        super(Nombre, edad, sueldo, EmpleadoArray[]);
         this.cantVendida = cantVendida;
+        this.comision = comision;
     }
     
-    public int Comision(){
+    public double Comision(){
     int cantventas;
     Scanner entrada=new Scanner(System.in);
     System.out.println("Ingrese la cantidad de ventas");
@@ -43,7 +44,7 @@ import java.util.Scanner;
         return comision;
     }
 
-
-
-    
+    public String toString() {
+        return "Vendedor{" + "comision=" + comision + '}';
+    }
 }
