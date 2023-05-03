@@ -7,12 +7,36 @@
  *
  * @author 
  */
-public class Directivo {
+public class Directivo extends Empleado {
+    private String categoria;
+    private String empleadoarray[];
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+    public Directivo(String categoria, String[] empleadoarray) {
+        this.categoria = categoria;
+        this.empleadoarray = empleadoarray;
     }
+
+    @Override
+    public String toString() {
+        return "Directivo{" + "categoria=" + categoria + ", empleadoarray=" + empleadoarray + '}';
+    }
+
+    
+    
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public String[] getEmpleadoarray() {
+        return empleadoarray;
+    }
+
+    public void setEmpleadoarray(String[] empleadoarray) {
+        this.empleadoarray = empleadoarray;
+    }
+
 }

@@ -7,12 +7,30 @@
  *
  * @author 
  */
-public class Cliente {
+public class Cliente extends Persona{
+    private int telefono;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+    
+    @Override
+    public String toString() {
+        return "Cliente{" + "telefono=" + telefono + '}';
     }
+
+    
+    
+    
+    public Cliente(int telefono) {
+        this.telefono = telefono;
+    }
+
+    
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    
+ 
 }
