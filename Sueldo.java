@@ -3,6 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
 
+
+/* 8,33% es el presentismo
+*  3% por parte de la obra social
+* 2% por Pami
+* 11% por jubilacion 
+* 1,5% por el fondo ancional de empleo
+* seguro de vida 00,3%
+
+
+*/
 /**
  *
  * @author 
@@ -12,10 +22,10 @@ public class Sueldo {
 private double obraSocial;
     private double jubilacion;
     private double presentismo;
-    private double sB;
+    private double SueldoBruto;
     private Vendedor vendedor;
 
-    public Sueldo(double obraSocial, double jubilacion, double presentismo, String cargo, AsignacionFamiliar af, char g, Vendedor v) {
+    public Sueldo(double obraSocial, double jubilacion, double presentismo, Vendedor v) {
         this.obraSocial = obraSocial;
         this.jubilacion = jubilacion;
         this.presentismo = presentismo;
@@ -24,7 +34,7 @@ private double obraSocial;
  
     public void emitirDetalle()
     {
-        System.out.println("OBRA SOCIAL: "+ this.obraSocial + " JUBILACION: "+ this.jubilacion+" PRESENTISMO: "+this.presentismo+ " SUELDO NETO: "+);
+        System.out.println("OBRA SOCIAL: "+ this.obraSocial + " JUBILACION: "+ this.jubilacion+" PRESENTISMO: "+this.presentismo+ " SUELDO NETO: "+ this.CalcularNeto());
     }
 
 
@@ -50,6 +60,13 @@ private double obraSocial;
 
     public void setPresentismo(double presentismo) {
         this.presentismo = presentismo;
+    }
+    
+    public double CalcularNeto(){
+        
+        double SueldoNeto = 0.0;
+        SueldoNeto = SueldoBruto - 3*100/SueldoBruto - 11*100/SueldoBruto + 10*100/SueldoBruto;
+        return SueldoNeto;
     }
 
 
