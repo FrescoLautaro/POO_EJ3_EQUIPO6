@@ -7,12 +7,20 @@
  *
  * @author 
  */
-public class Empleado {
+public class Empleado extends Persona {
    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+    private double sB;
+
+    public Empleado(String n, int e,  double sB) {
+        super(nombre, edad);
+        this.sB = sB;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "sB=" + sB + '}';
+    }
+    
+        
+
 }
